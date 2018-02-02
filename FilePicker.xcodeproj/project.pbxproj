@@ -22,6 +22,7 @@
 		967B694820230EFA00D8B697 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		967B694B20230EFA00D8B697 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		967B694D20230EFA00D8B697 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96FC7015202327500074B302 /* FilePicker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FilePicker.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +55,7 @@
 		967B694020230EFA00D8B697 /* FilePicker */ = {
 			isa = PBXGroup;
 			children = (
+				96FC7015202327500074B302 /* FilePicker.entitlements */,
 				967B694120230EFA00D8B697 /* AppDelegate.swift */,
 				967B694320230EFA00D8B697 /* ViewController.swift */,
 				967B694520230EFA00D8B697 /* Main.storyboard */,
@@ -97,6 +99,11 @@
 					967B693D20230EFA00D8B697 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -274,11 +281,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FilePicker/FilePicker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 33QCT42BS2;
+				DEVELOPMENT_TEAM = 29X7GPV9P6;
 				INFOPLIST_FILE = FilePicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lmm.FilePicker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hhmedic.app.npacs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -289,11 +297,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FilePicker/FilePicker.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 33QCT42BS2;
+				DEVELOPMENT_TEAM = 29X7GPV9P6;
 				INFOPLIST_FILE = FilePicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lmm.FilePicker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hhmedic.app.npacs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
