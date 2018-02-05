@@ -9,7 +9,7 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,UIDocumentInteractionControllerDelegate {
 
     var window: UIWindow?
 
@@ -20,8 +20,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        
+        print(url.absoluteString)
+        let topVC = Utils.topviewController()
+        let documentVC = UIDocumentInteractionController(url: url)
+        documentVC.delegate = self
+        documentVC.presentOpenInMenu(from: CGRect.zero, in: (topVC?.view)!, animated: true)
         return true
+    }
+    
+    func documentInteractionController(_ controller: UIDocumentInteractionController, willBeginSendingToApplication application: String?) {
+        
+    }
+    
+    func documentInteractionController(_ controller: UIDocumentInteractionController, didEndSendingToApplication application: String?) {
+        
+    }
+    
+    func documentInteractionControllerDidDismissOpenInMenu(_ controller: UIDocumentInteractionController) {
+        
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
